@@ -1,0 +1,199 @@
+/* 南传经典网 · 中国风样式 */
+:root{
+  --paper:#f3ead7;
+  --paper-2:#efe4cd;
+  --ink:#2a241c;
+  --ink-soft:#5a5040;
+  --cinnabar:#9b2d20;
+  --cinnabar-2:#b8432f;
+  --gold:#8a6d3b;
+  --line:#c9b58a;
+  --shadow:rgba(80,55,20,.18);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background-color:var(--paper);
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,.35), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(140,100,40,.08), transparent 45%),
+    repeating-linear-gradient(0deg, rgba(120,90,40,.025) 0 2px, transparent 2px 4px);
+  color:var(--ink);
+  font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--cinnabar);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* 页眉 */
+.masthead{
+  text-align:center;
+  padding:22px 16px 16px;
+  border-bottom:3px double var(--line);
+  background:linear-gradient(180deg, rgba(255,255,255,.25), transparent);
+}
+.brand a{font-size:30px;letter-spacing:.35em;color:var(--ink);font-weight:700;}
+.brand.big a{font-size:46px;letter-spacing:.5em;}
+.masthead .seal{
+  display:inline-block;margin:10px auto 4px;
+  width:54px;height:54px;line-height:54px;
+  border:2px solid var(--cinnabar);border-radius:6px;
+  color:var(--cinnabar);font-size:22px;letter-spacing:0;
+  font-family:"Kaiti SC","KaiTi","STKaiti",serif;
+  box-shadow:0 0 0 3px rgba(155,45,32,.12) inset;
+}
+.tagline{color:var(--ink-soft);font-size:15px;letter-spacing:.12em;margin:6px 0 0;}
+.topnav{margin-top:10px;font-size:15px;}
+.topnav a{margin:0 12px;color:var(--ink-soft);}
+.topnav a:hover{color:var(--cinnabar);}
+
+/* 阅读页 */
+.reader{max-width:800px;margin:26px auto 60px;padding:0 18px;}
+.crumb{font-size:13px;color:var(--ink-soft);margin-bottom:8px;}
+.crumb a{color:var(--ink-soft);}
+.sutta-title{
+  text-align:center;font-size:27px;font-weight:700;
+  padding-bottom:14px;margin:6px 0 4px;
+  border-bottom:3px double var(--line);
+  font-family:"Kaiti SC","KaiTi","STKaiti",serif;
+}
+.meta{text-align:center;font-size:13px;color:var(--ink-soft);margin:8px 0 18px;}
+
+.toolbar{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;margin:0 auto 22px;padding:8px 12px;
+  border:1px solid var(--line);border-radius:6px;
+  background:rgba(255,255,255,.3);max-width:560px;
+  font-size:14px;color:var(--ink-soft);
+}
+.toolbar button{
+  font-family:inherit;cursor:pointer;font-size:14px;
+  border:1px solid var(--cinnabar);background:var(--paper-2);
+  color:var(--cinnabar);border-radius:4px;padding:4px 12px;
+}
+.toolbar button:hover{background:var(--cinnabar);color:#fff;}
+.toolbar .sep{color:var(--line);}
+.toolbar .nav a{margin:0 6px;}
+
+.sutta-body{
+  background:linear-gradient(180deg,#fbf5e6,#f6ecd6);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:34px 40px;
+  box-shadow:0 6px 24px var(--shadow);
+  font-size:19px;line-height:2.05;
+  text-align:justify;
+}
+.sutta-body p{margin:0 0 14px;}
+.sutta-body h2{
+  font-family:"Kaiti SC","KaiTi","STKaiti",serif;
+  font-size:22px;text-align:center;color:var(--cinnabar);
+  margin:26px 0 14px;
+}
+.vn{color:var(--cinnabar);font-size:.82em;margin:0 1px;}
+.collation{
+  margin:22px 0;padding:14px 18px;
+  border-left:4px solid var(--gold);
+  background:rgba(138,109,59,.07);
+  font-size:15.5px;line-height:1.95;
+}
+.collation h3{
+  font-size:16px;color:var(--gold);margin:0 0 8px;
+  font-family:"Kaiti SC","KaiTi",serif;letter-spacing:.1em;
+}
+.collation p{margin:0 0 8px;color:var(--ink-soft);}
+blockquote.license{
+  margin:24px 0 0;padding:12px 16px;
+  border-top:1px dashed var(--line);
+  font-size:13.5px;color:var(--ink-soft);line-height:1.8;
+}
+/* 竖排 */
+.sutta-body.vertical{
+  writing-mode:vertical-rl;
+  text-orientation:upright;
+  max-height:78vh;overflow-x:auto;overflow-y:hidden;
+  padding:28px 30px;line-height:2.1;
+}
+.sutta-body.vertical p{margin:0 0 0 18px;}
+.sutta-body.vertical .vn{writing-mode:horizontal-tb;}
+
+.sutta-foot{
+  max-width:800px;margin:24px auto 0;padding:0 18px;
+  font-size:13px;color:var(--ink-soft);line-height:1.8;
+}
+
+/* 首页 */
+.home-main{max-width:1000px;margin:0 auto;padding:24px 18px 50px;}
+.intro{
+  max-width:760px;margin:18px auto;padding:16px 22px;
+  background:rgba(255,255,255,.3);border:1px solid var(--line);
+  border-radius:6px;font-size:15px;line-height:1.95;color:var(--ink-soft);
+  text-align:justify;
+}
+.intro strong{color:var(--cinnabar);}
+.search-box{max-width:760px;margin:26px auto;}
+.search-box input{
+  width:100%;padding:13px 18px;font-size:17px;font-family:inherit;
+  border:2px solid var(--line);border-radius:8px;background:#fbf5e6;color:var(--ink);
+}
+.search-box input:focus{outline:none;border-color:var(--cinnabar);}
+.results{margin-top:10px;}
+.results a{
+  display:block;padding:10px 14px;border-bottom:1px solid var(--line);
+  color:var(--ink);
+}
+.results a:hover{background:rgba(155,45,32,.06);text-decoration:none;}
+.results .r-book{
+  display:inline-block;min-width:42px;color:#fff;background:var(--cinnabar);
+  border-radius:4px;font-size:12px;text-align:center;margin-right:10px;padding:1px 6px;
+}
+.results .none{color:var(--ink-soft);padding:10px;}
+
+.books{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px;
+}
+.book-card{
+  display:block;text-align:center;padding:20px 12px;
+  background:linear-gradient(180deg,#fbf5e6,#f1e6cd);
+  border:1px solid var(--line);border-radius:8px;
+  box-shadow:0 4px 14px var(--shadow);color:var(--ink);
+}
+.book-card:hover{text-decoration:none;border-color:var(--cinnabar);transform:translateY(-3px);transition:.15s;}
+.bc-seal{
+  width:46px;height:46px;line-height:46px;margin:0 auto 8px;
+  border:2px solid var(--cinnabar);border-radius:6px;color:var(--cinnabar);
+  font-family:"Kaiti SC","KaiTi",serif;font-size:18px;
+}
+.bc-cn{font-size:22px;font-weight:700;font-family:"Kaiti SC","KaiTi",serif;letter-spacing:.1em;}
+.bc-pal{font-size:12px;color:var(--ink-soft);margin-top:4px;font-style:italic;}
+.bc-count{font-size:13px;color:var(--gold);margin-top:8px;}
+
+/* 列表页 */
+.listing{max-width:820px;margin:26px auto 60px;padding:0 18px;}
+.list-title{text-align:center;font-size:28px;font-family:"Kaiti SC","KaiTi",serif;}
+.list-title .pal{font-size:14px;color:var(--ink-soft);font-style:italic;font-weight:400;}
+.list-sub{text-align:center;color:var(--ink-soft);margin:6px 0 18px;font-size:14px;}
+.filter{
+  width:100%;padding:12px 16px;font-size:16px;font-family:inherit;
+  border:2px solid var(--line);border-radius:8px;background:#fbf5e6;color:var(--ink);
+  margin-bottom:16px;
+}
+.filter:focus{outline:none;border-color:var(--cinnabar);}
+.sutta-list{list-style:none;padding:0;margin:0;
+  column-count:2;column-gap:26px;}
+.sutta-list li{break-inside:avoid;margin-bottom:6px;}
+.sutta-list a{display:block;padding:8px 12px;border-bottom:1px solid var(--line);color:var(--ink);font-size:15px;}
+.sutta-list a:hover{background:rgba(155,45,32,.06);text-decoration:none;color:var(--cinnabar);}
+
+.site-foot{
+  border-top:3px double var(--line);margin-top:30px;padding:18px;
+  text-align:center;font-size:12.5px;color:var(--ink-soft);line-height:1.8;
+}
+
+@media (max-width:720px){
+  .books{grid-template-columns:repeat(2,1fr);}
+  .sutta-list{column-count:1;}
+  .sutta-body{padding:22px 18px;font-size:18px;}
+  .brand.big a{font-size:34px;letter-spacing:.3em;}
+}
